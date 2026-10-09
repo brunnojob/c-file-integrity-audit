@@ -172,13 +172,16 @@ static int load(const char *path, Manifest *m) {
         if (result)
             break;
         intmax_t size = strtoimax(line + 65, &end, 10);
-        if (errno || size < 0 || *end != ' ') {
+        if (errno || end == line + 65 || size < 0 || *end != ' ' ||
+            (intmax_t)(off_t)size != size) {
             result = -1;
             break;
         }
         char *encoded = end + 1;
         size_t length = strcspn(encoded, "\r\n");
-        if (!length || length % 2 || length > 8190) {
+        if (!length || length % 2 || length > 8190 ||
+            (encoded[length] && strcmp(encoded + length, "\n") &&
+             strcmp(encoded + length, "\r\n"))) {
             result = -1;
             break;
         }
