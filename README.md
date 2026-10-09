@@ -1,28 +1,32 @@
 # File Integrity Audit
 
-Inventário recursivo de arquivos com SHA-256, comparação de tamanho e identificação de inclusões, alterações e remoções.
+A recursive SHA-256 file inventory with size comparison and detection of additions, changes, and removals.
 
-## Executar
+## Run
 
-Requisitos: C17 e OpenSSL.
+Requirements: C17 and OpenSSL.
 
 ```sh
 make
 build/integrity snapshot ./arquivos > ./baseline.txt
-build/integrity verify ./arquivos ./baseline.txt > resultado.json
+build/integrity verify ./arquivos ./baseline.txt > result.json
 ```
 
-## Funcionamento
+## Behavior
 
-Mantenha o manifesto fora da pasta auditada. Links simbólicos e arquivos especiais são recusados. Retorno: 0 para igualdade, 1 para diferenças e 2 para erro. O manifesto deve permanecer sob seu controle.
+Keep the manifest outside the audited directory. Symbolic links and special files are rejected. Exit codes: 0 for an exact match, 1 for differences, and 2 for an error. Keep the baseline manifest under your control.
 
-## Persistência de resultados
+## Result synchronization
 
-O arquivo de operações está em [vercel-home-telemetry-api.vercel.app](https://vercel-home-telemetry-api.vercel.app/laboratory.html?project=c-file-integrity-audit). As migrações Supabase estão no [repositório da API](https://github.com/brunnojob/vercel-home-telemetry-api/tree/main/supabase/migrations).
+The [operations archive](https://vercel-home-telemetry-api.vercel.app/laboratory.html?project=c-file-integrity-audit) stores execution results. Supabase migrations are in the [API repository](https://github.com/brunnojob/vercel-home-telemetry-api/tree/main/supabase/migrations).
 
 ```sh
-python cloud/sync.py enqueue resultado.json --project c-file-integrity-audit
+python cloud/sync.py enqueue result.json --project c-file-integrity-audit
 python cloud/sync.py sync
 ```
 
-Defina `BRUNNODEV_ACCESS_TOKEN` com sua sessão. A fila SQLite conserva os relatórios até confirmação do servidor; o mesmo conteúdo não gera registros duplicados. Tokens não são gravados no código.
+Set `BRUNNODEV_ACCESS_TOKEN` to your session token. The SQLite outbox retains reports until the server confirms persistence; identical content does not create duplicate records. Tokens are not stored in source code. To run the synchronization tests:
+
+```sh
+python -m unittest discover -s cloud
+```
