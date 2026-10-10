@@ -1,0 +1,47 @@
+{
+  "repository": "brunnojob/c-file-integrity-audit",
+  "inputs": [
+    ".proof/scenarios.json",
+    ".proof/demo.py"
+  ],
+  "cases": [
+    {
+      "name": "sudo apt-get update && sudo apt-get install -y libssl-dev",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "sudo apt-get update && sudo apt-get install -y libssl-dev"
+      ],
+      "timeout": 900,
+      "display": false
+    },
+    {
+      "name": "make",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "make"
+      ],
+      "timeout": 900,
+      "display": false
+    },
+    {
+      "name": "Detect a real file modification against SHA-256 baseline",
+      "argv": [
+        "python",
+        ".proof/demo.py"
+      ],
+      "contains": [
+        "\"changed\": 1",
+        "\"valid\": false"
+      ],
+      "timeout": 120
+    }
+  ]
+}
