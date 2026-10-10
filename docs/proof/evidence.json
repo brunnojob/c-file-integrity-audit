@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "repository": "brunnojob/c-file-integrity-audit",
-  "source_commit": "a6f198b9ac0809c0700117e1b3d6ca5d706a191f",
-  "generated_at": "2026-10-10T02:36:09.556638+00:00",
-  "run_url": "https://github.com/brunnojob/c-file-integrity-audit/actions/runs/38017552853",
+  "source_commit": "4d7323eb77cbd254f0d62abbbb21531a5c5a1f84",
+  "generated_at": "2026-10-10T02:44:12.963127+00:00",
+  "run_url": "https://github.com/brunnojob/c-file-integrity-audit/actions/runs/38018040119",
   "inputs_sha256": {
     ".proof/scenarios.json": "61d57e803a4375fc94cfb695f422937be35e02e7c67671f11063daff8e0c7936",
     ".proof/demo.py": "6e826c9e92a3d6f11a5a9c86610c62de5298221e7a11099b34d2a5d95dd73f4c"
@@ -23,9 +23,9 @@
       "exit": 0,
       "expected_exit": 0,
       "passed": true,
-      "seconds": 9.872,
-      "output": "Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]\nGet:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]\nHit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease\nGet:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\nGet:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\nGet:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]\nGet:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [640 B]\nGet:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [492 kB]\nGet:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]\nGet:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1375 kB]\nGet:11 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [548 kB]\nGet:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [306 kB]\nGet:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]\nGet:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]\nGet:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1761 kB]\nGet:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [401 kB]\nGet:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.0 kB]\nGet:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]\nGet:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1121 kB]\nGet:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [228 kB]\nGet:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1220 kB]\nGet:22 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [245 kB]\nGet:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1669 kB]\nGet:24 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [383 kB]\nGet:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [49.8 kB]\nGet:26 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]\nFetched 12.3 MB in 1s (10.7 MB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\nlibssl-dev is already the newest version (3.0.13-0ubuntu3.16).\n0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.\n",
-      "output_sha256": "e4029c83adea7b8d5d57ae6039871e49485a77b020b795b8390eb075ec7b8dc8"
+      "seconds": 4.965,
+      "output": "Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]\nHit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease\nGet:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\nGet:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]\nGet:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]\nGet:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1375 kB]\nGet:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [306 kB]\nGet:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]\nGet:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]\nGet:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1761 kB]\nGet:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [401 kB]\nGet:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.0 kB]\nGet:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]\nGet:14 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1121 kB]\nGet:15 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [228 kB]\nGet:16 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1220 kB]\nGet:17 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [245 kB]\nGet:18 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1669 kB]\nGet:19 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [383 kB]\nGet:20 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [49.8 kB]\nGet:21 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]\nGet:22 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]\nGet:23 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]\nGet:24 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [492 kB]\nGet:25 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [548 kB]\nGet:26 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [640 B]\nFetched 12.3 MB in 1s (9705 kB/s)\nReading package lists...\nReading package lists...\nBuilding dependency tree...\nReading state information...\nlibssl-dev is already the newest version (3.0.13-0ubuntu3.16).\n0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.\n",
+      "output_sha256": "5e90fd13a63861bf3b67adbed7879c23e3dc9d1fcebd364ccca8457cccbba72a"
     },
     {
       "display": false,
@@ -41,7 +41,7 @@
       "exit": 0,
       "expected_exit": 0,
       "passed": true,
-      "seconds": 2.054,
+      "seconds": 1.656,
       "output": "mkdir -p build\ncc -std=c17 -O2 -Wall -Wextra -Wpedantic -Werror src/main.c -o build/integrity -lcrypto\n",
       "output_sha256": "a48408a2bd0bf32c8e4715ce457b1228b9c9d2549a5c33e2de5ca1d435ed4688"
     },
